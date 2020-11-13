@@ -1,16 +1,30 @@
 :root{
   --bg-main: ghostwhite;
   --bg-menu: black;
+  --menu-a: #f7236a;
 }
 *{
   margin: 0;
   padding: 0;
 }
 body{
+  -webkit-text-size-adjust: 100%;
   background: var(--bg-main);
+  font-size: 10px;
+}
+.menu_d{
+  background: var(--bg-menu);
+  width: auto;
+  height: 9px;
 }
 .menu{
   background: var(--bg-menu);
   width: auto;
-  height: 5px;
+}
+.menu a{
+  color: var(--menu-a);
+  //background: var(--bg-menu);
+  text-decoration: none;
+  padding: 0 5px;
+
 }
