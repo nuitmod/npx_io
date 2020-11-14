@@ -1,4 +1,4 @@
-var CACHE_NAME = 'version-1'; // bump this version when you make changes.
+var CACHE_NAME = 'version-2'; // bump this version when you make changes.
 // Put all your urls that you want to cache in this array
 var urlsToCache = [
     'index.html',
@@ -44,4 +44,3 @@ self.addEventListener('activate', function(event) {
         })
     );
 });
-
