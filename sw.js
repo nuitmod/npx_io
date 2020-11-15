@@ -1,3 +1,17 @@
+// ServiceWorker Registration
+// if('serviceWorker' in navigator) {
+//     window.addEventListener('load', function() {
+//         navigator.serviceWorker.register('sw.js').then(function(registration) {
+//             // Registration was successful
+//             console.log('ServiceWorker registration successful with scope: ', registration.scope);
+//
+//         }, function(err) {
+//             // registration failed :(
+//             console.log('ServiceWorker registration failed: ', err);
+//         });
+//     });
+// }
+
 var CACHE_NAME = 'version-2'; // bump this version when you make changes.
 // Put all your urls that you want to cache in this array
 var urlsToCache = [

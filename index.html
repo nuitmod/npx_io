@@ -82,19 +82,28 @@
     color: var(--bg-menu);
     font-weight: 500;
   }
+  /* h6{
+    background: #000;
+  } */
   </style>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
   <div class="menu_d"></div>
-  <div class="menu">
-    <a href="https://nuitmod.github.io/io_proj">io_proj</a>
-    <a href="https://nuitmod.github.io/vi_pwa">vi_pwa</a>
-    <a href="https://nuitmod.github.io/mod_i">mod_i</a>
-    <a href="https://nuitmod.github.io/ini_pwa">ini_pwa</a>
-    <a href="https://nuitmod.github.io/npx_io">in browser</a>
-  </div>
+  <amp-accordion class="menu" disable-session-states>
+    <section>
+      <h6>menu</h6>
+      <div>
+        <a href="https://nuitmod.github.io/io_proj">io_proj</a>
+        <a href="https://nuitmod.github.io/vi_pwa">vi_pwa</a>
+        <a href="https://nuitmod.github.io/mod_i">mod_i</a>
+        <a href="https://nuitmod.github.io/ini_pwa">ini_pwa</a>
+        <a href="https://nuitmod.github.io/npx_io">in browser</a>
+      </div>
+    </section>
+  </amp-accordion>
   <div class="amp-text">
     <h6>main index npx_io</h6>
     <div class="img">
@@ -375,5 +384,11 @@ I.
 <!-- <amp-script src="https://nuitmod.github.io/npx_io/index.js"></amp-script>
 <amp-script src="https://nuitmod.github.io/npx_io/main.js"></amp-script>
 <amp-script layout="container" src="https://code.jquery.com/jquery-3.4.1.js" sandbox="allow-forms"></amp-script> -->
+<amp-install-serviceworker
+  src="https://nuitmod.github.io/npx_io/sw.js"
+  data-iframe-src="https://nuitmod.github.io/npx_io/index.js"
+  layout="nodisplay"
+>
+</amp-install-serviceworker>
 </body>
 </html>
