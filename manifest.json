@@ -13,7 +13,7 @@
   "sizes": "512x512"
 }
 ],
-  "start_url": "/amp/index.html",
+  "start_url": "/npx_io/amp/index.html",
   "background_color": "#000",
   "display": "standalone",
   "scope": "/",
