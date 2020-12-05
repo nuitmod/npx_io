@@ -53,7 +53,10 @@
   body{
     -webkit-text-size-adjust: 100%;
     background: var(--bg-main);
-    font-size: 11px;
+    font-size: 12px;
+  }
+  #main{
+    padding: 10px 9px;
   }
   .menu_d{
     background: var(--bg-menu);
@@ -86,15 +89,15 @@
     font-weight: 500;
   }
   audio{
-    height: 19px;
-    with: 200px;
+    height: 25px;
+    with: 209px;
     color: black;
     background: black;
     background-color: black;
     z-index: 12;
   }
   .poetry{
-    font-size: 11px;
+    font-size: 13px;
     background-color: var(--bg-menu);
   }
   .p_cont{
@@ -105,7 +108,7 @@
     padding: 5px 8px;
   }
   .title{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-decoration: underline
   }
@@ -140,7 +143,7 @@
       <br>
       <div class="mod">
         <amp-img id="mod" src="../img/mam.jpg" alt="" height="99" width="65"></amp-img>
-        <amp-img id="ier" src="../gifs/fireworks.GIF" alt=""  height="69" width="87"></amp-img>
+        <!-- <amp-img id="ier" src="../gifs/fireworks.GIF" alt=""  height="69" width="87"></amp-img> -->
         <!-- <div>
           <amp-img id="ier" src="../gifs/star_tree.GIF" alt=""  height="69" width="59"></amp-img>
           <amp-img id="ier" src="../gifs/fireworks.GIF" alt=""  height="69" width="59"></amp-img>
@@ -192,7 +195,7 @@
       <section>
         <h5 class="audio_data">Разные песни</h5>
         <div>
-          <p>Ты погляди</p>
+          <!-- <p>Ты погляди</p>
           <br>
           <amp-audio preload="none" controls>
            <source src="https://nuitmod.github.io/npx_io/media/Ты_погляди.mp3" type="audio/mpeg">
@@ -201,14 +204,12 @@
           <br>
           <amp-audio preload="none" controls>
            <source src="https://nuitmod.github.io/npx_io/media/Twist.mp3" type="audio/mpeg">
-          </amp-audio>
+          </amp-audio> -->
           <p>Ты погляди</p>
-          <br>
           <amp-audio preload="none" controls>
            <source src="../media/Ты_погляди.mp3" type="audio/mpeg">
           </amp-audio>
           <p>Tanita Tikaram - Twist in My Sobriety</p>
-          <br>
           <amp-audio preload="none" controls>
            <source src="../media/Twist.mp3" type="audio/mpeg">
           </amp-audio>
@@ -234,8 +235,8 @@
     <amp-img id="ier" src="../gifs/cat.GIF" alt=""  height="69" width="59"></amp-img>
   </div> -->
   <amp-install-serviceworker
-  src="/sw.js"
-  data-iframe-src="/install-sw.html"
+  src="../sw.js"
+  data-iframe-src="../install-sw.html"
   layout="nodisplay"
 >
 </amp-install-serviceworker>
