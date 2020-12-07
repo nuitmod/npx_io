@@ -64,15 +64,16 @@
     background: var(--bg-main);
     font-size: 10px;
   }
-  .menu_d{
+  /* .menu_d{
     background: var(--bg-menu);
     width: auto;
     height: 9px;
-  }
+  } */
   amp-accordion {
     background: var(--bg-menu);
+    color: var(--bg-main);
   }
-  amp-accordion .h_menu{
+  amp-accordion .amp_a{
     background: var(--bg-menu);
     width: auto;
   }
@@ -81,6 +82,9 @@
     color: var(--menu-a);
     text-decoration: none;
     padding: 0 5px;
+  }
+  amp-accordion p{
+    color: var(--menu-a);
   }
   p{
     color: var(--bg-menu);
@@ -92,17 +96,29 @@
   .youtube{
     padding: 5px 0;
   }
+  audio{
+    height: 10px;
+    with: 209px;
+    color: black;
+    background: black;
+    background-color: black;
+    z-index: 12;
+  }
+  a{
+    color: black;
+  }
   </style>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+<script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
 <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
-  <div class="menu_d"></div>
+  <!-- <div class="menu_d"></div> -->
   <amp-accordion class="menu" disable-session-states>
     <section>
-      <h6 class="h_menu">menu</h6>
+      <h6 class="amp_a">menu</h6>
       <div>
         <a href="https://nuitmod.github.io/io_proj">io_proj</a>
         <a href="https://nuitmod.github.io/vi_pwa">vi_pwa</a>
@@ -117,7 +133,18 @@
     <div class="img">
       <amp-img src="./img/img5.JPG" alt="" height="89" width="39"></amp-img>
     </div>
-<div class="content">
+    <amp-accordion disable-session-states>
+      <section>
+        <h5 class="amp_a">Radio</h5>
+        <div>
+    <p>Пикник</p>
+    <amp-audio preload="none" controls>
+     <source src="https://pub0201.101.ru/stream/pro/aac/64/157?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjMxLjE2Mi40LjIyNCIsInVzZXJhZ2VudCI6Ik1vemlsbGFcLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdFwvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lXC84Ny4wLjQyODAuODggU2FmYXJpXC81MzcuMzYiLCJ1aWRfY2hhbm5lbCI6IjE1NyIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MDczNDkwMDh9.rWMD4tWmvVsNiZDACGBPwQRIYaKiryQPmLG8bNxGLJ0" type="audio/mpeg">
+    </amp-audio>
+  </div>
+</section>
+</amp-accordion>
+   <div class="content">
   <p>
     25. Interrupt
 I.
@@ -226,8 +253,7 @@ I.
 <div class="youtube">
 <amp-youtube
     data-videoid="TPGO6T1h528"
-
-    width="270" height="159">
+    width="250" height="139">
 </amp-youtube>
 </div>
 <amp-install-serviceworker
