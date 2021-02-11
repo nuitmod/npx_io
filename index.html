@@ -83,13 +83,10 @@
     text-decoration: none;
     padding: 0 5px;
   }
-  amp-accordion p{
+  amp-accordion h6{
     color: var(--menu-a);
   }
-  p{
-    color: var(--bg-menu);
-    font-weight: 500;
-  }
+
   .content{
     padding: 5px 8px;
   }
@@ -107,11 +104,19 @@
   a{
     color: var(--bg-menu);
   }
+  button{
+    color: var(--bg-main);
+    background-color: var(--bg-menu);
+  }
   </style>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-<script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
-<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
@@ -137,14 +142,41 @@
       <section>
         <h5 class="amp_a">Radio</h5>
         <div>
-    <p>Пикник</p>
+    <h6>Пикник</h6>
     <amp-audio preload="none" controls>
      <source src="https://pub0201.101.ru/stream/pro/aac/64/157?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjMxLjE2Mi40LjIyNCIsInVzZXJhZ2VudCI6Ik1vemlsbGFcLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdFwvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lXC84Ny4wLjQyODAuODggU2FmYXJpXC81MzcuMzYiLCJ1aWRfY2hhbm5lbCI6IjE1NyIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MDczNDkwMDh9.rWMD4tWmvVsNiZDACGBPwQRIYaKiryQPmLG8bNxGLJ0" type="audio/mpeg">
     </amp-audio>
   </div>
 </section>
 </amp-accordion>
-   <div class="content">
+<amp-state id="my_data">
+  <script type="application/json">
+    {
+      "mod1": {
+        "name": "Ruth",
+        "job": "programmer"
+      },
+      "mod2": {
+        "name": "Miut",
+        "job": "contacter"
+      }
+    }
+  </script>
+</amp-state>
+<!-- <p [text]="'data :: ' + mod2.name">data state</p> -->
+
+<p [text]="'maud :: ' + name">inf</p>
+
+<button on="tap:AMP.setState({name: 'Maud'})">maud</button>
+
+
+<p [text]="'ruth :: ' + nm">dat</p>
+
+<button on="tap:AMP.setState({nm: 'Ruth'})">ruth</button>
+<amp-accordion disable-session-states>
+  <section>
+    <h5 class="amp_a">Proza</h5>
+<div class="content">
   <p>
     25. Interrupt
 I.
@@ -218,12 +250,19 @@ I.
 <amp-script layout="container" src="https://code.jquery.com/jquery-3.4.1.js" sandbox="allow-forms"></amp-script> -->
 
 </div>
+</section>
+</amp-accordion>
+<amp-accordion disable-session-states>
+  <section>
+    <h5 class="amp_a">Video</h5>
 <div class="youtube">
 <amp-youtube
     data-videoid="TPGO6T1h528"
-    width="250" height="139">
+    width="200" height="100">
 </amp-youtube>
 </div>
+</section>
+</amp-accordion>
 <amp-install-serviceworker
   src="/npx_io/sw.js"
   data-iframe-src="install-sw.html"
