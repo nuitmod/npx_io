@@ -117,6 +117,8 @@
   <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
@@ -149,22 +151,33 @@
   </div>
 </section>
 </amp-accordion>
+<!-- <amp-iframe width=200 height=200
+    layout="responsive"
+    sandbox="allow-scripts allow-same-origin"
+    src="https://nuitmod.github.io/io_proj/ifr/ifr.html" >
+    <p placeholder></p>
+</amp-iframe> -->
 <amp-state id="my_data">
   <script type="application/json">
     {
       "mod1": {
-        "name": "Ruth",
-        "job": "programmer"
+        "name1": "Ruth",
+        "job1": "programmer"
       },
       "mod2": {
-        "name": "Miut",
-        "job": "contacter"
+        "name2": "Miut",
+        "job2": "contacter"
       }
     }
   </script>
 </amp-state>
 <!-- <p [text]="'data :: ' + mod2.name">data state</p> -->
-
+<template type="amp-mustache" id="my_data">
+  <p>{{name1}}</p>
+</template>
+<p [text]="my_data.mod1.job1" >
+  data
+</p>
 <p [text]="'maud :: ' + name">inf</p>
 
 <button on="tap:AMP.setState({name: 'Maud'})">maud</button>
@@ -257,8 +270,8 @@ I.
     <h5 class="amp_a">Video</h5>
 <div class="youtube">
 <amp-youtube
-    data-videoid="TPGO6T1h528"
-    width="200" height="100">
+  data-videoid="7GWO2NOG1o8"
+  width="200" height="100">
 </amp-youtube>
 </div>
 </section>
@@ -270,5 +283,11 @@ I.
 >
 </amp-install-serviceworker>
 <a href="/lineup.html" data-rel="prefetch">See Full Lineup</a>
+<amp-iframe width=300 height=300
+    layout="responsive"
+    sandbox="allow-scripts allow-same-origin allow-top-navigation"
+    src="https://nuitmod.github.io/io_proj/ifr/ifr.html" >
+<p placeholder></p>
+</amp-iframe>
 </body>
 </html>
