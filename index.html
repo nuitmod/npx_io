@@ -123,6 +123,7 @@
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
@@ -186,6 +187,19 @@
 <!-- <template type="amp-mustache" id="my_data">
   <p>{{name1}}</p>
 </template> -->
+
+<amp-list width="auto"
+  height="100"
+  layout="fixed-height"
+  src="https://pyw-prs.vercel.app/api">
+  <template type="amp-mustache">
+    <div class="url-entry">
+      <a href="{{mod1.name1}}">{{mod1.job1}}</a>
+    </div>
+</template>
+</amp-list>
+
+
 <p [text]="my_data.mod1.job1">data</p>
 <p [text]="'maud :: ' + name">inf</p>
 <button on="tap:AMP.setState({name: 'Maud'})">maud</button>
