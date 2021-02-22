@@ -84,6 +84,7 @@
   }
   amp-accordion h6{
     color: var(--menu-a);
+    height: 11px;
   }
   .content{
     padding: 5px 8px;
@@ -107,7 +108,7 @@
     background-color: var(--bg-menu);
   }
   amp-iframe{
-    height: 119px;
+    height: 79px;
   }
   amp-carousel{
     height: 119px;
@@ -142,7 +143,7 @@
   <div class="amp-text">
     <h6>main index npx_io</h6>
     <div class="img">
-      <amp-img src="./img/img5.JPG" alt="" height="89" width="39"></amp-img>
+      <amp-img src="./img/img5.JPG" alt="" height="79" width="29"></amp-img>
     </div>
     <amp-accordion disable-session-states>
       <section>
@@ -191,6 +192,8 @@
 
 <p [text]="'ruth :: ' + nm">dat</p>
 <button on="tap:AMP.setState({nm: 'Ruth'})">ruth</button>
+
+<button on="tap:my_data.refresh">refr</button>
 
 <amp-accordion disable-session-states>
   <section>
@@ -266,6 +269,7 @@ I.Мы перешли в здание, где можно было пережда
     <amp-img src="./img/pin1.JPG" width="200" height="90"></amp-img>
     <amp-img src="./img/pin_foto.JPG" width="200" height="90"></amp-img>
     <amp-img src="./img/pin_rnv.GIF" width="200" height="90"></amp-img>
+    <amp-img src="./img/all_mod.jpg" width="200" height="90"></amp-img>
     </amp-carousel>
 </div>
 </section>
