@@ -188,18 +188,6 @@
   <p>{{name1}}</p>
 </template> -->
 
-<amp-list width="auto"
-  height="100"
-  layout="fixed-height"
-  src="https://pyw-prs.vercel.app/api">
-  <template type="amp-mustache">
-    <div class="url-entry">
-      <a href="{{mod1.name1}}">{{mod1.job1}}</a>
-    </div>
-</template>
-</amp-list>
-
-
 <p [text]="my_data.mod1.job1">data</p>
 <p [text]="'maud :: ' + name">inf</p>
 <button on="tap:AMP.setState({name: 'Maud'})">maud</button>
@@ -316,6 +304,18 @@ I.Мы перешли в здание, где можно было пережда
     src="https://nuitmod.github.io/npx_io/ifr/ifr.html" >
 <p placeholder>dat</p>
 </amp-iframe>
+
+<amp-list width="auto"
+  height="50"
+  layout="fixed-height"
+  src="https://pyw-prs.vercel.app/api">
+  <template type="amp-mustache">
+    <div class="url-entry">
+      <a href="{{mod1.name1}}">{{mod1.job1}}</a>
+    </div>
+</template>
+</amp-list>
+
 <!-- <p>3 ifr to inner cdn </p>
 <amp-iframe width=200 height=200
     layout="responsive"
