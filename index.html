@@ -123,6 +123,7 @@
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -201,7 +202,12 @@
 <!-- <template type="amp-mustache" id="my_data">
   <p>{{name1}}</p>
 </template> -->
+<<<<<<< HEAD
 <p [text]="my_data.items">data</p>
+=======
+
+<p [text]="my_data.mod1.job1">data</p>
+>>>>>>> 0e8fb03a580b6636b5f67b65fe8e9ce5f202de29
 <p [text]="'maud :: ' + name">inf</p>
 <button on="tap:AMP.setState({name: 'Maud'})">maud</button>
 
@@ -317,6 +323,18 @@ I.Мы перешли в здание, где можно было пережда
     src="https://nuitmod.github.io/npx_io/ifr/ifr.html" >
 <p placeholder>dat</p>
 </amp-iframe>
+
+<amp-list width="auto"
+  height="50"
+  layout="fixed-height"
+  src="https://pyw-prs.vercel.app/api">
+  <template type="amp-mustache">
+    <div>
+      <p>name: {{name}} :: job: {{job}}</p>
+    </div>
+</template>
+</amp-list>
+
 <!-- <p>3 ifr to inner cdn </p>
 <amp-iframe width=200 height=200
     layout="responsive"
