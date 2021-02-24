@@ -124,6 +124,7 @@
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
@@ -171,22 +172,36 @@
 <amp-state id="my_data">
   <script type="application/json">
     {
-      "mod1": {
-        "name1": "Ruth",
-        "job1": "programmer"
+      "items":[
+    {
+        "name": "Ruth",
+        "job": "programmer"
       },
-      "mod2": {
-        "name2": "Miut",
-        "job2": "contacter"
+      {
+        "name": "Miut",
+        "job": "contacter"
       }
+      ]
     }
   </script>
 </amp-state>
+
+<amp-list width="auto"
+  height="25"
+  layout="fixed-height"
+  src="amp-state:my_data">
+  <template type="amp-mustache">
+    <div>
+      name: {{name}}
+      job: {{job}}
+    </div>
+</template>
+</amp-list>
 <!-- <p [text]="'data :: ' + mod2.name">data state</p> -->
 <!-- <template type="amp-mustache" id="my_data">
   <p>{{name1}}</p>
 </template> -->
-<p [text]="my_data.mod1.job1">data</p>
+<p [text]="my_data.items">data</p>
 <p [text]="'maud :: ' + name">inf</p>
 <button on="tap:AMP.setState({name: 'Maud'})">maud</button>
 
