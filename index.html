@@ -169,7 +169,7 @@
     src="http://192.168.100.7:3000/ifr/ifr.html" >
     <p placeholder></p>
 </amp-iframe> -->
-<amp-state id="my_data">
+<amp-state id="my_data" src=".">
   <script type="application/json">
     {
       "items":[
@@ -202,8 +202,8 @@
   <p>{{name1}}</p>
 </template> -->
 
-<p [text]="my_data.items">data</p>
-
+<p [text]="my_data.items.map(i=>i.name)">wm name:</p>
+<p [text]="my_data.items.map(i=>i.job)">wm job:</p>
 
 <p [text]="'maud :: ' + name">inf</p>
 <button on="tap:AMP.setState({name: 'Maud'})">maud</button>
