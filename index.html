@@ -208,14 +208,14 @@
 <button on="tap:AMP.setState({nm: 'Ruth'})">ruth</button>
 
 <button on="tap:my_data.refresh">refr</button>
+<button on="tap:proza.toggleVisibility,vid.toggleVisibility">hide</button>
 
-<amp-accordion disable-session-states>
+<amp-accordion id="proza" disable-session-states>
   <section>
     <h5 class="amp_a">Proza</h5>
-<div class="content">
+<div  class="content">
   <p>
-    25. Interrupt
-II.
+
 Они тебя зовут. Хотят переговорить именно с тобой
 Ruth, открывай портал, мы входим::v
 -Я сейчас разверну координатное пространство. ::ruth. Будет видна только голографическая разметка.
@@ -246,19 +246,6 @@ undefined__ восприятие всего..
 Забытый проект
 -Ты знаешь где находится пространство, откуда приходит Ivvie?
 -Нет. Я даже не уверена в том, существует ли оно. :: iy
-<p>
-26. Total reload
-I.Мы перешли в здание, где можно было переждать процесс перезагрузки пространства.
-Здание не имело ни окон ни каких либо опознавательных знаков. Стены были как будто из цельного чёрного стекла.
-Чёрный дом мироздания.
-- Это помещение полностью защищено от катаклизмов пространства. Что бы не происходило с матрицей, если мы находимся внутри, нам ничего не угрожает.
-Внутри так же имеется необходимое оборудование для управление матричными полями.
-В помещении горел тусклый красно-розовый аварийный свет.
-Было удивительно смотреть сквозь чёрные стекла здания и осознавать что за ними пустота и ничего нет.
-Нет никакой матрицы людей домов чего бы то ни было ещё.
-
-- В принципе можно на всякий случай спуститься в помещение -1-го уровня, но, похоже, в этом нет необходимости.
-А также можно перемещаться в соседние здания по высотным переходам.
 <!-- <amp-script src="https://nuitmod.github.io/npx_io/index.js"></amp-script>
 <amp-script src="https://nuitmod.github.io/npx_io/main.js"></amp-script>
 <amp-script layout="container" src="https://code.jquery.com/jquery-3.4.1.js" sandbox="allow-forms"></amp-script> -->
@@ -288,12 +275,12 @@ I.Мы перешли в здание, где можно было пережда
 </div>
 </section>
 </amp-accordion>
-<amp-accordion disable-session-states>
+<amp-accordion id="vid" disable-session-states>
   <section>
     <h5 class="amp_a">Video</h5>
     <div class="youtube">
     <amp-youtube
-      data-videoid="7GWO2NOG1o8"
+      data-videoid="JNaYn5mdph8"
       width="200" height="100">
     </amp-youtube>
     </div>
@@ -301,13 +288,13 @@ I.Мы перешли в здание, где можно было пережда
 </amp-accordion>
 <!-- <a href="/lineup.html" data-rel="prefetch">See Full Lineup</a> -->
 <p>io_proj ifr</p>
-<amp-iframe width=100 height=100
+<!-- <amp-iframe width=100 height=100
     layout="responsive"
     frameborder="0"
     sandbox="allow-scripts "
     src="https://nuitmod.github.io/io_proj/ifr/ifr.html" >
 <p placeholder></p>
-</amp-iframe>
+</amp-iframe> -->
 <p>inner ifr</p>
 <amp-iframe width=200 height=200
     layout="responsive"
@@ -325,7 +312,7 @@ I.Мы перешли в здание, где можно было пережда
         "brand_name": "Pinhui",
         "country": "China",
         "img_url": "./img/pin_foto.JPG",
-        "vid_id": "7GWO2NOG1o8"
+        "vid_id": "JNaYn5mdph8"
       },
       {
         "brand_name": "Yoeyyoy",
