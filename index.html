@@ -90,7 +90,7 @@
   }
   audio{
     height: 10px;
-    with: 209px;
+    width: 209px;
     color: black;
     background: black;
     background-color: black;
@@ -108,6 +108,25 @@
   }
   amp-carousel{
     height: 119px;
+  }
+  #l-area{
+    position: absolute;
+    left: 0;
+    width: 25%;
+  }
+  #r-area{
+    position: absolute;
+    right: 0;
+    width: 75%;
+  }
+  @media screen and (max-width: 800px) {
+    #l-area{
+      width: 100%;
+    }
+    #r-area{
+      position: relative;
+      display: none;
+    }
   }
   </style>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -142,6 +161,8 @@
     <div class="img">
       <amp-img src="./img/img5.JPG" alt="" height="79" width="29"></amp-img>
     </div>
+  </div>
+  <div id="l-area">
     <amp-accordion disable-session-states>
       <section>
         <h5 class="amp_a">Radio</h5>
@@ -208,7 +229,7 @@
 <button on="tap:AMP.setState({nm: 'Ruth'})">ruth</button>
 
 <button on="tap:my_data.refresh">refr</button>
-<button on="tap:proza.toggleVisibility,vid.toggleVisibility">hide</button>
+<button on="tap:proza.toggleVisibility,vid.toggleVisibility,r-area.toggleVisibility">hide</button>
 
 <amp-accordion id="proza" disable-session-states>
   <section>
@@ -377,5 +398,11 @@ undefined__ восприятие всего..
   layout="nodisplay"
 >
 </amp-install-serviceworker>-->
+  </div>
+  <div id="r-area">
+    <amp-iframe src="https://vv-mod.vercel.app/vi/" width="auto" height="2599" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
+      <amp-img placeholder height="1" width="2" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
+    </amp-iframe>
+  </div>
 </body>
 </html>
